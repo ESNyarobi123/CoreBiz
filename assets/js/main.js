@@ -323,7 +323,7 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
   /**
-   * Team Member Bio - Tazama Bio / Funga Bio button
+   * Team Member Bio - View Bio / Close Bio button
    */
   document.addEventListener('DOMContentLoaded', function() {
     const members = document.querySelectorAll('.member-content');
@@ -331,16 +331,16 @@
       const bio = member.querySelector('p.member-bio');
       if (bio) {
         const btn = document.createElement('button');
-        btn.innerText = 'Tazama Bio';
+        btn.innerText = 'View Bio';
         btn.className = 'view-bio-btn';
         btn.type = 'button';
         btn.onclick = function() {
           if (bio.style.display === 'none' || bio.style.display === '') {
             bio.style.display = 'block';
-            btn.innerText = 'Funga Bio';
+            btn.innerText = 'Close Bio';
           } else {
             bio.style.display = 'none';
-            btn.innerText = 'Tazama Bio';
+            btn.innerText = 'View Bio';
           }
         };
         member.insertBefore(btn, bio);
